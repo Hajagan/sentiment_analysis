@@ -93,16 +93,18 @@ print(clean_data[['review_text', 'Sentiment']])
 clean_data.to_csv('cleaned_dataset_with_sentiment.csv', index=False)
 
 # Sample product reviews for testing the sentiment analysis function
-reviews = [
+sample_reviews = [
     "This product is amazing! I love it.",
     "The quality of this product is terrible. I regret buying it.",
     "It's an okay product, nothing special.",
     "Fast shipping and great customer service. Highly recommended!",
     "Worst purchase ever. The product broke after a few days of use.",
+    "Absolutely loved it, will be buying again.",
+    "Did not see any changes.",
 ]
 
 # Test the sentiment analysis function on each review
-for review in reviews:
+for review in sample_reviews:
     predicted_sentiment = predict_sentiment(review)
     print(f"Review: {review}")
     print(f"Predicted Sentiment: {predicted_sentiment}")
